@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{077818E7-C3A2-7675-54A1-3E81A5F8EFD5}") = "VRUI", "Assembly-CSharp.csproj", "{6EE87190-604F-8CA6-46F5-4C47A2DAB418}"
+EndProject
+Project("{077818E7-C3A2-7675-54A1-3E81A5F8EFD5}") = "VRUI", "Assembly-CSharp-Editor.csproj", "{2E0FC98B-01E4-D4DF-8003-F3843B7C0EBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EE87190-604F-8CA6-46F5-4C47A2DAB418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE87190-604F-8CA6-46F5-4C47A2DAB418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE87190-604F-8CA6-46F5-4C47A2DAB418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE87190-604F-8CA6-46F5-4C47A2DAB418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E0FC98B-01E4-D4DF-8003-F3843B7C0EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0FC98B-01E4-D4DF-8003-F3843B7C0EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0FC98B-01E4-D4DF-8003-F3843B7C0EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0FC98B-01E4-D4DF-8003-F3843B7C0EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
