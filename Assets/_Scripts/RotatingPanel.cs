@@ -36,9 +36,9 @@ public class RotatingPanel : MonoBehaviour {
 		//place objects on a 180' spectrum
 		for(int i =0; i< ObjectsInOrder.Length; i++)
 		{
-			transform.localPosition = Vector3.left * MeterDistanceFromCamera;
+			ObjectsInOrder[i].transform.position = Vector3.left * MeterDistanceFromCamera;
 			ObjectsInOrder[i].transform.RotateAround(Vector3.zero, Vector3.up, 180 * (i + 1) / (ObjectsInOrder.Length+1));
-
+			//ObjectsInOrder [i].transform.parent = this.transform;
 		}
 	}
 }
