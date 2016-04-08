@@ -2,13 +2,15 @@
 using System.Collections;
 
 
-//[ExecuteInEditMode]
+[ExecuteInEditMode]
 public class RotatingPanel : MonoBehaviour {
 
 	public Camera ViewersCamera;
 	public float MeterDistanceFromCamera;
 	public float TotalWrapAroundRangeInDegrees;
 	public GameObject[] ObjectsInOrder;
+
+	//public bool forceObjectsToLookAtCamera;
 
 	// Use this for initialization
 	void Start () {
@@ -18,27 +20,38 @@ public class RotatingPanel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyUp (KeyCode.F))
+		//only runs if in editor, not playing. You can call the placeObjectsInOrder() function 
+		//elsewhere when you add something new.
+		if(!Application.isPlaying && ObjectsInOrder.Length>0)
 			placeObjectsInOrder ();
-	
+		
 	}
 
 	void placeObjectsInOrder()
 	{
+		print ("running");
 		//place the objects at MeterDistance from camera
 		foreach (GameObject go in ObjectsInOrder) 
 		{
-			go.transform.parent = this.transform;
-			transform.localPosition = Vector3.zero;
-
+			if (go != null) {
+				go.transform.parent = this.transform;
+				transform.localPosition = Vector3.zero;
+			}
 		}
 
 		//place objects on a 180' spectrum
-		for(int i =0; i< ObjectsInOrder.Length; i++)
+		for(int i =0; i< ObjectsInOrder.Length && ObjectsInOrder[i] != null; i++)
 		{
 			ObjectsInOrder[i].transform.position = Vector3.left * MeterDistanceFromCamera;
-			ObjectsInOrder[i].transform.RotateAround(Vector3.zero, Vector3.up, 180 * (i + 1) / (ObjectsInOrder.Length+1));
-			//ObjectsInOrder [i].transform.parent = this.transform;
+			ObjectsInOrder[i].transform.RotateAround(transform.position, Vector3.up, 180 * (i + 1) / (ObjectsInOrder.Length+1));
+
+
+
+			//currently too buggy
+			/*
+			if(forceObjectsToLookAtCamera)
+			ObjectsInOrder [i].transform.LookAt (ViewersCamera.transform);
+			*/
 		}
 	}
 }
