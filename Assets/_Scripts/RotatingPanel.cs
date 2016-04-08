@@ -10,12 +10,19 @@ public class RotatingPanel : MonoBehaviour {
 	public float HeightAdjustFromViewerEyeLevel;
 	public float TotalWrapAroundRangeInDegrees;
 	public GameObject[] ObjectsInOrder;
+	public bool forceObjectsToLookAtCamera;
 
 	//public bool forceObjectsToLookAtCamera;
 
 	// Use this for initialization
 	void Start () {
-	
+		FindCamera ();
+		transform.position = ViewersCamera.transform.position;
+	}
+
+	void FindCamera()
+	{
+		ViewersCamera = Camera.main;
 	}
 	
 	// Update is called once per frame
@@ -54,11 +61,10 @@ public class RotatingPanel : MonoBehaviour {
 
 
 
-			//currently too buggy
-			/*
-			if(forceObjectsToLookAtCamera)
-			ObjectsInOrder [i].transform.LookAt (ViewersCamera.transform);
-			*/
+			//Look at the camera
+			if (forceObjectsToLookAtCamera) {
+				ObjectsInOrder [i].transform.LookAt (2*ObjectsInOrder[i].transform.position - ViewersCamera.transform.position); //to orient the right way. Just "lookat(viewersCamera.transform) makes it a mirror image.
+			}
 		}
 	}
 }
