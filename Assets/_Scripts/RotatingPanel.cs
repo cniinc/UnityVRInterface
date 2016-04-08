@@ -7,6 +7,7 @@ public class RotatingPanel : MonoBehaviour {
 
 	public Camera ViewersCamera;
 	public float MeterDistanceFromCamera;
+	public float HeightAdjustFromViewerEyeLevel;
 	public float TotalWrapAroundRangeInDegrees;
 	public GameObject[] ObjectsInOrder;
 
@@ -29,7 +30,7 @@ public class RotatingPanel : MonoBehaviour {
 
 	void placeObjectsInOrder()
 	{
-		print ("running");
+		
 		//place the objects at MeterDistance from camera
 		foreach (GameObject go in ObjectsInOrder) 
 		{
@@ -42,7 +43,13 @@ public class RotatingPanel : MonoBehaviour {
 		//place objects on a 180' spectrum
 		for(int i =0; i< ObjectsInOrder.Length && ObjectsInOrder[i] != null; i++)
 		{
-			ObjectsInOrder[i].transform.position = Vector3.left * MeterDistanceFromCamera;
+			//set standard Left and adjust height
+			Vector3 tempPosition = Vector3.left * MeterDistanceFromCamera;
+			tempPosition.y = ViewersCamera.transform.position.y + HeightAdjustFromViewerEyeLevel;
+
+			ObjectsInOrder [i].transform.position = tempPosition;
+
+
 			ObjectsInOrder[i].transform.RotateAround(transform.position, Vector3.up, 180 * (i + 1) / (ObjectsInOrder.Length+1));
 
 
