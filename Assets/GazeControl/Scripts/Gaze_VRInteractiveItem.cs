@@ -15,7 +15,7 @@ using UnityEngine.UI;
     [SerializeField]
         private bool autoScale = true; // scale the Collider with the button.
     
-
+		public event Action OnSwipe;
 
         protected bool m_IsOver;
 

@@ -8,9 +8,11 @@ public class RotatingPanel : MonoBehaviour {
 	public Camera ViewersCamera;
 	public float MeterDistanceFromCamera;
 	public float HeightAdjustFromViewerEyeLevel;
-	public float TotalWrapAroundRangeInDegrees;
+	//public float TotalRotationDegrees;
+	public float RotationRate;
 	public GameObject[] ObjectsInOrder;
-	public bool forceObjectsToLookAtCamera;
+	private bool forceObjectsToLookAtCamera = true;
+
 
 	//public bool forceObjectsToLookAtCamera;
 
@@ -32,7 +34,11 @@ public class RotatingPanel : MonoBehaviour {
 		//elsewhere when you add something new.
 		if(!Application.isPlaying && ObjectsInOrder.Length>0)
 			placeObjectsInOrder ();
-		
+
+		if (Input.GetKey (KeyCode.RightArrow))
+			rotateRight ();
+		if (Input.GetKey (KeyCode.LeftArrow))
+			rotateLeft ();
 	}
 
 	void placeObjectsInOrder()
@@ -66,5 +72,16 @@ public class RotatingPanel : MonoBehaviour {
 				ObjectsInOrder [i].transform.LookAt (2*ObjectsInOrder[i].transform.position - ViewersCamera.transform.position); //to orient the right way. Just "lookat(viewersCamera.transform) makes it a mirror image.
 			}
 		}
+	}
+
+
+	private void rotateRight()
+	{
+		transform.Rotate (Vector3.up * Time.deltaTime * RotationRate);
+	}
+
+	private void rotateLeft()
+	{
+		transform.Rotate (-1*Vector3.up * Time.deltaTime*RotationRate);
 	}
 }

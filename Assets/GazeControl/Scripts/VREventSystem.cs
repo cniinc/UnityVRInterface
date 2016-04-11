@@ -119,6 +119,8 @@ public class VREventSystem : MonoBehaviour
             {
                 HandleClick();
             }
+			// TODO: listen for rotate input
+			// notifiy current interactigle
         }
         else
         {

@@ -98,7 +98,6 @@
      <Compile Include="Assets\Unity Assets\VRSampleScenes\Scripts\Utils\UIFader.cs" />
      <Compile Include="Assets\Unity Assets\VRSampleScenes\Scripts\Utils\UIMovement.cs" />
      <Compile Include="Assets\Unity Assets\VRSampleScenes\Scripts\Utils\UITint.cs" />
-     <Compile Include="Assets\Unity Assets\VRSampleScenes\Scripts\Utils\VRCameraFade.cs" />
      <Compile Include="Assets\Unity Assets\VRSampleScenes\Scripts\Utils\VRCameraUI.cs" />
      <Compile Include="Assets\Unity Assets\VRStandardAssets\Scripts\VRDeviceManager.cs" />
      <Compile Include="Assets\Unity Assets\VRStandardAssets\Scripts\VREyeRaycaster.cs" />
@@ -109,6 +108,7 @@
      <Compile Include="Assets\_Scripts\FadeScreen.cs" />
      <Compile Include="Assets\_Scripts\RotatingPanel.cs" />
      <Compile Include="Assets\_Scripts\SimpleSmoothMouseLook.cs" />
+     <Compile Include="Assets\_Scripts\VRCameraFade.cs" />
      <None Include="Assets\Unity Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
      <None Include="Assets\Unity Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
      <None Include="Assets\Unity Assets\VRSampleScenes\Shaders\UIOverlay.shader" />

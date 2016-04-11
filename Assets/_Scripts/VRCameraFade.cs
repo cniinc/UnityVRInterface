@@ -15,8 +15,8 @@ namespace VRStandardAssets.Utils
 
 
         [SerializeField] private Image m_FadeImage;                     // Reference to the image that covers the screen.
-        [SerializeField] private AudioMixerSnapshot m_DefaultSnapshot;  // Settings for the audio mixer to use normally.
-        [SerializeField] private AudioMixerSnapshot m_FadedSnapshot;    // Settings for the audio mixer to use when faded out.
+        private AudioMixerSnapshot m_DefaultSnapshot;  // Settings for the audio mixer to use normally.
+        private AudioMixerSnapshot m_FadedSnapshot;    // Settings for the audio mixer to use when faded out.
         [SerializeField] private Color m_FadeColor = Color.black;       // The colour the image fades out to.
         [SerializeField] private float m_FadeDuration = 2.0f;           // How long it takes to fade in seconds.
         [SerializeField] private bool m_FadeInOnSceneLoad = false;      // Whether a fade in should happen as soon as the scene is loaded.
@@ -120,7 +120,7 @@ namespace VRStandardAssets.Utils
         }
 
 
-        public IEnumerator BeginFadeIn (bool fadeAudio)
+		public IEnumerator BeginFadeIn (bool fadeAudio)
         {
             // Fade in the audio over the default duration.
             if(m_DefaultSnapshot && fadeAudio)
