@@ -157,6 +157,8 @@ GameObject:
   - 222: {fileID: 587351014}
   - 114: {fileID: 587351013}
   - 114: {fileID: 587351012}
+  - 65: {fileID: 587351016}
+  - 114: {fileID: 587351015}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -220,7 +222,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 587351013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077351586}
+        m_MethodName: FadeOut
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &587351013
@@ -256,6 +269,30 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587351010}
+--- !u!114 &587351015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587351010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130c05c83f7c8924396c6c0f9095343b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoScale: 1
+--- !u!65 &587351016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587351010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1021417469
 Prefab:
   m_ObjectHideFlags: 0
@@ -298,6 +335,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e590baeb9aac5da4eb2905ecff02b1e8, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1077351586 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11438646, guid: e590baeb9aac5da4eb2905ecff02b1e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1021417469}
+  m_Script: {fileID: 11500000, guid: 31957ab02a8654b448736febf48c16e9, type: 3}
 --- !u!1 &1354769252
 GameObject:
   m_ObjectHideFlags: 0

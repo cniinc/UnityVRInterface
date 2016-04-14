@@ -38,6 +38,8 @@ public class VREventSystem : MonoBehaviour
     [Tooltip("show crosshair at all times.")]
     public bool classicCursor = true;
 
+	public KeyCode InteractionKey;
+
 
 
         private PointerEventData eventSystem;                           // Is used to send simple events
@@ -115,7 +117,7 @@ public class VREventSystem : MonoBehaviour
         {
         if (!autoClick) {
             Cursor.lockState = CursorLockMode.Locked;
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+			if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(InteractionKey))
             {
                 HandleClick();
             }
