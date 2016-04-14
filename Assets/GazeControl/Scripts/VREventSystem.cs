@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.VR;
 
 /// <summary>
 /// This scripts allows interactions with objects in the scene based on a gaze.
@@ -108,7 +109,13 @@ public class VREventSystem : MonoBehaviour
 
 
 
-     
+     		//turns off SimpleSmoothMouseLook if the HMD is detected. MouseLook interferes with HMD recognition of object.
+		if (VRDevice.isPresent) 
+		{
+			GetComponent<SimpleSmoothMouseLook> ().enabled = false;
+			Debug.Log ("Turning off SimpleSmoothMouseLook because " + VRDevice.model + " detected");
+		
+		}
 
             UnityEngine.VR.InputTracking.Recenter(); // recenters the VR input
         }

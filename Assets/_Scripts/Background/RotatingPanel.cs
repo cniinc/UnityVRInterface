@@ -14,10 +14,8 @@ public class RotatingPanel : MonoBehaviour {
 	private bool forceObjectsToLookAtCamera = true;
 
 
-	//public bool forceObjectsToLookAtCamera;
-
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		FindCamera ();
 		transform.position = ViewersCamera.transform.position;
 	}
@@ -78,11 +76,13 @@ public class RotatingPanel : MonoBehaviour {
 
 	private void rotateRight()
 	{
+		print ("Rotating Right");
 		transform.Rotate (Vector3.up * Time.deltaTime * RotationRate);
 	}
 
 	private void rotateLeft()
 	{
+		print ("Rotate Left");
 		transform.Rotate (-1*Vector3.up * Time.deltaTime*RotationRate);
 	}
 }
