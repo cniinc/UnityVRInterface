@@ -46,9 +46,9 @@ public class RotatingPanel : MonoBehaviour {
 		foreach (GameObject go in ObjectsInOrder) 
 		{
 			if (go != null) {
-				//go.transform.parent = this.transform;
+				
 				go.transform.SetParent (this.transform);
-				transform.localPosition = Vector3.zero;
+				go.transform.localPosition = Vector3.zero;
 			}
 		}
 

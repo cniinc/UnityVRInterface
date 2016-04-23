@@ -114,7 +114,6 @@ public class VREventSystem : MonoBehaviour
 		{
 			GetComponent<SimpleSmoothMouseLook> ().enabled = false;
 			Debug.Log ("Turning off SimpleSmoothMouseLook because " + VRDevice.model + " detected");
-		
 		}
 
             UnityEngine.VR.InputTracking.Recenter(); // recenters the VR input

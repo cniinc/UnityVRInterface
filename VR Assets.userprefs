@@ -1,12 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GazeControl\Scripts\Gaze_VRInteractiveItem.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\Background\RotatingPanel.cs">
     <Files>
-      <File FileName="Assets\_Scripts\RotatingPanel.cs" Line="1" Column="1" />
-      <File FileName="Assets\GazeControl\Scripts\VREventSystem.cs" Line="328" Column="69" />
+      <File FileName="Assets\_Scripts\Background\RotatingPanel.cs" Line="51" Column="47" />
+      <File FileName="Assets\GazeControl\Scripts\VREventSystem.cs" Line="124" Column="26" />
       <File FileName="Assets\GazeControl\Scripts\Gaze_VRInteractiveItem.cs" Line="13" Column="22" />
-      <File FileName="Assets\Unity Assets\VRStandardAssets\Scripts\VRInput.cs" Line="1" Column="1" />
-      <File FileName="Assets\Unity Assets\VRStandardAssets\Scripts\VRInteractiveItem.cs" Line="16" Column="66" />
+      <File FileName="Assets\GazeControl\Demo\GazeDemoMenu.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

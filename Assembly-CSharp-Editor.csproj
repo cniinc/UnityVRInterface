@@ -53,7 +53,6 @@
      <None Include="Assets\Unity VR Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
      <None Include="Assets\Unity VR Assets\VRSampleScenes\Shaders\SeparableAlpha.shader" />
      <None Include="Assets\Unity VR Assets\VRSampleScenes\Fonts\LICENSE.txt" />
-     <None Include="Assets\KnownBugs.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>D:/Unity534p1/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
