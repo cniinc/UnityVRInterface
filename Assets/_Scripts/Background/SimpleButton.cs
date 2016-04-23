@@ -27,6 +27,7 @@ public class SimpleButton : MonoBehaviour
 	private VRInteractiveItem m_InteractiveItem;       // The interactive item for where the user should click to load the level.
 	private Image m_ButtonImage;
 	private BoxCollider m_ButtonCollider;
+	private Canvas m_canvas;
 
 	private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
 
@@ -38,6 +39,7 @@ public class SimpleButton : MonoBehaviour
 		m_InteractiveItem = GetComponent<VRInteractiveItem> () as VRInteractiveItem;
 		m_ButtonImage = GetComponent<Image> () as Image;
 		m_ButtonCollider = GetComponent<BoxCollider> () as BoxCollider;
+		m_canvas = m_ButtonImage.canvas;
 	}
 
 	private void OnEnable ()
@@ -48,6 +50,7 @@ public class SimpleButton : MonoBehaviour
 
 		CurrentSprite = NormalSprite;
 		m_ButtonImage.sprite = CurrentSprite;
+		updateSprite ();
 	}
 
 
@@ -67,8 +70,9 @@ public class SimpleButton : MonoBehaviour
 		m_GazeOver = true;
 
 		CurrentSprite = HoverSprite;
-		m_ButtonImage.sprite = CurrentSprite;
-		print (CurrentSprite.bounds);
+		//m_ButtonImage.sprite = CurrentSprite;
+		updateSprite();
+		//print (CurrentSprite.textureRect);
 	}
 
 
@@ -80,7 +84,8 @@ public class SimpleButton : MonoBehaviour
 		m_GazeOver = false;
 
 		CurrentSprite = NormalSprite;
-		m_ButtonImage.sprite = CurrentSprite;
+		//m_ButtonImage.sprite = CurrentSprite;
+		updateSprite ();
 	}
 
 
@@ -94,12 +99,21 @@ public class SimpleButton : MonoBehaviour
 
 		CurrentSprite = PressedSprite;
 		m_ButtonImage.sprite = CurrentSprite;
+		updateSprite ();
 	}
 
 	private void updateSprite()
 	{
 		m_ButtonImage.sprite = CurrentSprite;
-		//m_ButtonCollider.size = new Vector3 (CurrentSprite.bounds.x, CurrentSprite.bounds.y, 1);
+		m_ButtonCollider.size = new Vector3 (CurrentSprite.textureRect.width, CurrentSprite.textureRect.height, 1);
+
+		//resize canvas as well
+//		Rect r = new Rect (m_canvas.pixelRect.x, m_canvas.pixelRect.y, CurrentSprite.textureRect.width, CurrentSprite.textureRect.height);
+//		m_canvas.pixelRect = r;
+
+		RectTransform rt = m_canvas.transform as RectTransform;
+		rt.sizeDelta = new Vector2(CurrentSprite.textureRect.width, CurrentSprite.textureRect.height);
+
 	}
 
 
