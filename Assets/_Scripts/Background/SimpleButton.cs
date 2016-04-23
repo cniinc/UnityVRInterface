@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using VRStandardAssets.Utils;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SimpleButton : MonoBehaviour
 {
@@ -19,8 +20,14 @@ public class SimpleButton : MonoBehaviour
 	[SerializeField] private Sprite NormalSprite;
 	[SerializeField] private Sprite HoverSprite;
 	[SerializeField] private Sprite PressedSprite;
-//	[Tooltip("If pressed, stays with the 'pressed' sprite")]
-//	[SerializeField] private bool ToggleStyle;
+
+	[Header("When Button is Selected...")]
+	public bool FadeOutToNewScene;
+	public string m_SceneToLoad;
+
+	[Header("Options")]
+	[Tooltip("If pressed, stays with the 'pressed' sprite")]
+	[SerializeField] private bool ToggleStyle;
 
 	private VRCameraFade m_CameraFade;                 // This fades the scene out when a new scene is about to be loaded.
 	private SelectionRadial m_SelectionRadial;         // This controls when the selection is complete.
@@ -92,12 +99,14 @@ public class SimpleButton : MonoBehaviour
 	private void HandleSelectionComplete()
 	{
 		// If the user is looking at the rendering of the scene when the radial's selection finishes, activate the button.
-//		if(m_GazeOver)
-//			StartCoroutine (ActivateButton());
+		if(m_GazeOver && FadeOutToNewScene)
+			StartCoroutine (FadeToNewScene());
 
 		//how do I make this run the OnClick event? 
-
-		CurrentSprite = PressedSprite;
+		if (ToggleStyle)
+			CurrentSprite = PressedSprite;
+		else
+			StartCoroutine (ShowSpriteForSeconds (PressedSprite, .3f));
 		m_ButtonImage.sprite = CurrentSprite;
 		updateSprite ();
 	}
@@ -116,23 +125,42 @@ public class SimpleButton : MonoBehaviour
 
 	}
 
-
-	private IEnumerator FadeToNewScene(string SceneToLoad)
+	private IEnumerator ShowSpriteForSeconds(Sprite sp, float seconds)
 	{
+		CurrentSprite = sp;
+		updateSprite ();
+		yield return new WaitForSeconds (seconds);
+		CurrentSprite = NormalSprite;
+		updateSprite ();
 
-		yield break;
-//		// If the camera is already fading, ignore.
-//		if (m_CameraFade.IsFading)
-//			yield break;
-//
-//		// If anything is subscribed to the OnButtonSelected event, call it.
-//		if (OnButtonSelected != null)
-//			OnButtonSelected(this);
-//
-//		// Wait for the camera to fade out.
-//		yield return StartCoroutine(m_CameraFade.BeginFadeOut(true));
-//
-//		// Load the level.
-//		SceneManager.LoadScene(m_SceneToLoad, LoadSceneMode.Single);
+	}
+
+
+	private IEnumerator FadeToNewScene()
+	{
+		// If the camera is already fading, ignore.
+		if (m_CameraFade.IsFading)
+			yield break;
+
+		// If anything is subscribed to the OnButtonSelected event, call it.
+		if (OnButtonSelected != null)
+			OnButtonSelected(this);
+
+		// Wait for the camera to fade out.
+		yield return StartCoroutine(m_CameraFade.BeginFadeOut(true));
+
+		// Load the level.
+		SceneManager.LoadScene(m_SceneToLoad, LoadSceneMode.Single);
+	}
+
+	public void LookAt(GameObject go)
+	{
+		if (!m_canvas) 
+		{
+			m_canvas = GetComponent<Image> ().canvas;
+		}
+
+		m_canvas.transform.LookAt(2*transform.position - go.transform.position);
+
 	}
 }

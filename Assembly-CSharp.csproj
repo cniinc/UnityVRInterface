@@ -110,6 +110,7 @@
      <Compile Include="Assets\_Scripts\Background\LookAtEditor.cs" />
      <Compile Include="Assets\_Scripts\Background\RotatingPanel.cs" />
      <Compile Include="Assets\_Scripts\Background\SimpleButton.cs" />
+     <Compile Include="Assets\_Scripts\Background\SimpleButtonEditor.cs" />
      <Compile Include="Assets\_Scripts\Background\SimpleSmoothMouseLook.cs" />
      <Compile Include="Assets\_Scripts\Background\VRCameraFade.cs" />
      <Compile Include="Assets\_Scripts\LookAtObject.cs" />
