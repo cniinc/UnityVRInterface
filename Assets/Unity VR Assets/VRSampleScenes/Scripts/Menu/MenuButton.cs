@@ -45,6 +45,8 @@ namespace VRStandardAssets.Menu
             m_SelectionRadial.Show();
 
             m_GazeOver = true;
+
+			print ("Over");
         }
 
 
