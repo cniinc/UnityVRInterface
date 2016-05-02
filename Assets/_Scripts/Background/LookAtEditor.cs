@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor;
+
 
 [CustomEditor(typeof(LookAtObject))]
 public class LookAtEditor : Editor {
@@ -34,3 +36,4 @@ public class LookAtEditor : Editor {
 		}
 	}
 }
+#endif

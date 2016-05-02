@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/Background/SimpleButtonEditor.cs">
+    <Files>
+      <File FileName="Assets/Unity VR Assets/VRSampleScenes/Scripts/Menu/MenuButton.cs" Line="49" Column="19" />
+      <File FileName="Assets/_Scripts/Background/SimpleButton.cs" Line="140" Column="3" />
+      <File FileName="Assets/_Scripts/Background/SimpleButtonEditor.cs" Line="36" Column="7" />
+      <File FileName="Assets/_Scripts/LookAtObject.cs" Line="18" Column="3" />
+      <File FileName="Assets/_Scripts/Background/LookAtEditor.cs" Line="39" Column="7" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
