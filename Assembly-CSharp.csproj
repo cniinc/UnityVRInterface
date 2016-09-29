@@ -149,6 +149,8 @@
      <Compile Include="Assets\Unity VR Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
      <Compile Include="Assets\_Scripts\Background\CameraUtilities.cs" />
      <Compile Include="Assets\_Scripts\Background\FadeScreen.cs" />
+     <Compile Include="Assets\_Scripts\Background\GameSchoolVRManager.cs" />
+     <Compile Include="Assets\_Scripts\Background\GameSchoolVRManagerEditor.cs" />
      <Compile Include="Assets\_Scripts\Background\LookAtEditor.cs" />
      <Compile Include="Assets\_Scripts\Background\RotatingPanel.cs" />
      <Compile Include="Assets\_Scripts\Background\SimpleButton.cs" />

@@ -436,7 +436,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2944e715956af54b950a64bd31855f0, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1579133446
+--- !u!1001 &1722354002
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -456,7 +456,7 @@ Prefab:
     - target: {fileID: 224000011847219640, guid: be2a05092e2e607449a62b8c4830fe90,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 2.67
       objectReference: {fileID: 0}
     - target: {fileID: 224000011847219640, guid: be2a05092e2e607449a62b8c4830fe90,
         type: 2}
@@ -486,12 +486,12 @@ Prefab:
     - target: {fileID: 224000011847219640, guid: be2a05092e2e607449a62b8c4830fe90,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1.204
       objectReference: {fileID: 0}
     - target: {fileID: 224000011847219640, guid: be2a05092e2e607449a62b8c4830fe90,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 2.15
+      value: 1.0249991
       objectReference: {fileID: 0}
     - target: {fileID: 224000011847219640, guid: be2a05092e2e607449a62b8c4830fe90,
         type: 2}
@@ -533,25 +533,29 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 223000012182235336, guid: be2a05092e2e607449a62b8c4830fe90,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013102639362, guid: be2a05092e2e607449a62b8c4830fe90,
-        type: 2}
-      propertyPath: m_FontData.m_AlignByGeometry
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013102639362, guid: be2a05092e2e607449a62b8c4830fe90,
-        type: 2}
-      propertyPath: m_FontData.m_BestFit
-      value: 1
+    - target: {fileID: 1000014044746984, guid: be2a05092e2e607449a62b8c4830fe90, type: 2}
+      propertyPath: m_Name
+      value: Text Over Button
       objectReference: {fileID: 0}
     - target: {fileID: 114000013102639362, guid: be2a05092e2e607449a62b8c4830fe90,
         type: 2}
       propertyPath: m_Text
-      value: This is a NEW text box. it orients to the camera automatically
+      value: Hit the "Play" button, then hold "Alt" to look around.
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011847219640, guid: be2a05092e2e607449a62b8c4830fe90,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.015237396
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011847219640, guid: be2a05092e2e607449a62b8c4830fe90,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.015237396
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011847219640, guid: be2a05092e2e607449a62b8c4830fe90,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.015237396
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be2a05092e2e607449a62b8c4830fe90, type: 2}
