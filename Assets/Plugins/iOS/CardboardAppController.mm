@@ -43,15 +43,24 @@ extern int UnityGetAudioEffectDefinitions(UnityAudioEffectDefinition*** definiti
 @implementation CardboardAppController
 
 - (UnityView *)createUnityView {
+  UnityRegisterViewControllerListener(self);
   UnityRegisterAudioPlugin(UnityGetAudioEffectDefinitions);
   UnityView* unity_view = [super createUnityView];
   createUiLayer(self, (UIView *)unity_view);
   return unity_view;
 }
 
-- (void)pause:(bool)paused {
-  self.paused = paused;
-  cardboardPause(paused);
+- (UIViewController *)unityViewController {
+  return UnityGetGLViewController();
+}
+
+- (void)viewWillAppear:(NSNotification *)notification {
+  cardboardPause(false);
+}
+
+- (void)setPaused:(BOOL)paused {
+  [super setPaused:paused];
+  cardboardPause(paused == YES);
 }
 
 - (void)finishActivityAndReturn:(BOOL)exitVR {

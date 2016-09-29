@@ -119,3 +119,9 @@
 
 /* Button label for user to confirm that they know the viewer is paired. (20 chars) */
 "OK" = "OK";
+
+/* Accessibility label for the gear icon to bring up settings (read out loud) */
+"AccessibilitySettingsButton" = "Einstellungen";
+
+/* Accessibility label for the back button to take us out of 3D mode (read out loud) */
+"AccessibilityBackButton" = "Zum vorherigen Bildschirm zurückkehren";

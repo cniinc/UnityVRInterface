@@ -17,12 +17,13 @@
 #import "UnityAppController+ViewHandling.h"
 
 #import "UnityAppController+UnityInterface.h"
+#include "PluginBase/UnityViewControllerListener.h"
 
-@interface CardboardAppController : UnityAppController
+@interface CardboardAppController : UnityAppController<UnityViewControllerListener>
 
 - (UnityView *)createUnityView;
 
-- (void)pause:(bool)paused;
+- (UIViewController *)unityViewController;
 
 // Override this method in a subclass to hook your own finishActivityAndReturn
 // functionality.
