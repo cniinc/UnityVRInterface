@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-namespace VRStandardAssets.Utils
-{
     // This class is used to fade the entire screen to black (or
     // any chosen colour).  It should be used to smooth out the
     // transition between scenes or restarting of a scene.
@@ -165,4 +163,3 @@ namespace VRStandardAssets.Utils
                 OnFadeComplete();
         }
     }
-}
