@@ -6,7 +6,7 @@ using UnityEditor;
 
 [CustomEditor(typeof(LookAtObject))]
 public class LookAtEditor : Editor {
-	[SerializeField] private bool AutoOrientToCamera;
+	bool AutoOrientToCamera = false;
 	public Camera ViewersCamera;
 
 	// Use this for initialization
@@ -24,10 +24,10 @@ public class LookAtEditor : Editor {
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector ();
-		bool cat = false;
-		cat = EditorGUILayout.Toggle ("Auto Orient to Camera", cat);
 
-		if (cat)
+		AutoOrientToCamera = EditorGUILayout.Toggle ("Auto Orient to Camera", AutoOrientToCamera);
+
+		if (AutoOrientToCamera)
 			LookAtCamera ();
 
 		LookAtObject LookAtScript = (LookAtObject)target;
