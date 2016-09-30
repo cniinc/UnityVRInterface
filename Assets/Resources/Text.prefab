@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 114000013102639362}
   - 223: {fileID: 223000012182235336}
   - 114: {fileID: 114000010762818642}
+  - 114: {fileID: 114000014206785252}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -84,6 +85,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: This is a NEW text box. it orients to the camera automatically
+--- !u!114 &114000014206785252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014044746984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea8bbd3011fa3e4080526ccf1af5ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222000011321741058
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -115,8 +127,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014044746984}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalRotation: {x: 0.00047802227, y: 0, z: 0, w: 0.9999999}
+  m_LocalPosition: {x: 0, y: 0, z: 10.46}
   m_LocalScale: {x: 0.060113657, y: 0.060113657, z: 0.060113657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -124,6 +136,6 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.15}
+  m_AnchoredPosition: {x: 0, y: -0.01}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}

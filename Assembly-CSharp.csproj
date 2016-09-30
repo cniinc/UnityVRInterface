@@ -157,7 +157,7 @@
      <Compile Include="Assets\_Scripts\Background\SimpleButtonEditor.cs" />
      <Compile Include="Assets\_Scripts\Background\SimpleSmoothMouseLook.cs" />
      <Compile Include="Assets\_Scripts\Background\VRCameraFade.cs" />
-     <Compile Include="Assets\_Scripts\LookAtObject.cs" />
+     <Compile Include="Assets\_Scripts\LookAtCamera.cs" />
      <Compile Include="Assets\_Scripts\SceneSelect.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />

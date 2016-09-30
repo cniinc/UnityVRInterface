@@ -4,9 +4,9 @@ using System.Collections;
 using UnityEditor;
 
 
-[CustomEditor(typeof(LookAtObject))]
+[CustomEditor(typeof(LookAtCamera))]
 public class LookAtEditor : Editor {
-	bool AutoOrientToCamera = false;
+	bool AutoOrientToCamera = true;
 	public Camera ViewersCamera;
 
 	// Use this for initialization
@@ -30,7 +30,7 @@ public class LookAtEditor : Editor {
 		if (AutoOrientToCamera)
 			LookAtCamera ();
 
-		LookAtObject LookAtScript = (LookAtObject)target;
+		LookAtCamera LookAtScript = (LookAtCamera)target;
 		if(GUILayout.Button("Orient To Camera"))
 		{
 			LookAtCamera ();
@@ -39,7 +39,7 @@ public class LookAtEditor : Editor {
 
 	private void LookAtCamera()
 	{
-		LookAtObject LookAtScript = (LookAtObject)target;
+		LookAtCamera LookAtScript = (LookAtCamera)target;
 		if (!ViewersCamera)
 			ViewersCamera = Camera.main;
 

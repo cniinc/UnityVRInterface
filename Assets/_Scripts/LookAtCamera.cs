@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LookAtObject : MonoBehaviour {
+public class LookAtCamera : MonoBehaviour {
 	
-
 	// Use this for initialization
 	void Start () {
 	
