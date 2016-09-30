@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class LookAtObject : MonoBehaviour {
+	
 
 	// Use this for initialization
 	void Start () {
@@ -10,8 +11,12 @@ public class LookAtObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+				
 	
 	}
+
+
 
 	public void LookAt(GameObject go)
 	{
