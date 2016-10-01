@@ -23,11 +23,13 @@ public class GameSchoolVRManagerEditor : Editor {
 	{
 		DrawDefaultInspector ();
 
+		GameSchoolVRManager GSMgrScript = (GameSchoolVRManager)target;
+
 		if (GUILayout.Button ("Create Text Box"))
-			GameSchoolVRManager.instance.InstantiateTextInFrontOfCamera ();
+			GSMgrScript.InstantiateTextInFrontOfCamera ();
 
 		if (GUILayout.Button ("Create Button"))
-			GameSchoolVRManager.instance.InstantiateButtonInFrontOfCamera ();
+			GSMgrScript.InstantiateButtonInFrontOfCamera ();
 
 	}
 
