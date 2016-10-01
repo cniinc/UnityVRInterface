@@ -23,7 +23,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
+#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR || UNITY_STANDALONE)
 using UnityEngine.VR;
 #endif  // UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
 
@@ -111,7 +111,7 @@ public class GazeInputModule : BaseInputModule {
 
     bool handlePendingClickRequired =
       !GvrViewer.Instance.Triggered && !Input.GetMouseButton(0);
-#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
+#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR || UNITY_STANDALONE )
     handlePendingClickRequired &= !GvrController.ClickButton;
 #endif  // UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
 
